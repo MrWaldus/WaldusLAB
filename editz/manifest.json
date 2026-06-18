@@ -1,0 +1,17 @@
+{
+  "name": "WaldusLab",
+  "short_name": "WaldusLab",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#0f0f0f",
+  "description": "Laboratorio creativo – FotoMapa y Editor de Fotos",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230f0f0f'/><text x='50' y='55' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='60' font-weight='bold' fill='white'>W</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WaldusLAB · Laboratorio fotográfico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0f0f0f;
+            --fg: #ffffff;
+            --border: #ffffff;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --font-ui: 'Inter', sans-serif;
+        }
+        body {
+            background: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-ui);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 960px;
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            border-bottom: 3px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-family: var(--font-mono);
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .tagline {
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #aaa;
+            letter-spacing: 1px;
+        }
+        .welcome {
+            margin-bottom: 3rem;
+        }
+        .welcome h1 {
+            font-family: var(--font-mono);
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+        .welcome p {
+            font-size: 1.1rem;
+            color: #bbb;
+            max-width: 600px;
+        }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .tool-card {
+            background: #1a1a1a;
+            border: 2px solid var(--border);
+            padding: 2rem 1.5rem;
+            transition: transform 0.15s, box-shadow 0.15s;
+            text-decoration: none;
+            color: var(--fg);
+            display: block;
+        }
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 8px 8px 0 rgba(255,255,255,0.1);
+        }
+        .tool-card .icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .tool-card h2 {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .tool-card p {
+            color: #aaa;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .tool-card .badge {
+            display: inline-block;
+            margin-top: 1rem;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            border: 1px solid var(--border);
+            padding: 0.3rem 0.8rem;
+            letter-spacing: 0.5px;
+        }
+        .footer {
+            margin-top: 3rem;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: #555;
+            border-top: 1px solid #2a2a2a;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .logo { font-size: 2.2rem; }
+            .tagline { font-size: 0.8rem; }
+            .welcome h1 { font-size: 1.6rem; }
+            .tools-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <span class="logo">*</span>
+            <span class="tagline">WaldusLAB · Creative Photo Laboratory</span>
+        </header>
+
+        <section class="welcome">
+            <h1>Bienvenido a WaldusLAB</h1>
+            <p>
+                Un laboratorio fotográfico experimental en tu navegador.
+                Elige tu herramienta y comienza a crear.
+            </p>
+        </section>
+
+        <div class="tools-grid">
+            <a href="/editz/" class="tool-card">
+                <span class="icon">🖼️</span>
+                <h2>Foto Editz</h2>
+                <p>Editor de fotos con efectos analógicos, grano, VHS, ASCII, halftone y más.</p>
+                <span class="badge">→ Abrir editor</span>
+            </a>
+
+            <a href="/mapa/" class="tool-card">
+                <span class="icon">🗺️</span>
+                <h2>Foto Mapa</h2>
+                <p>Explora y registra los mejores puntos fotográficos de Bogotá. Recomendaciones de Mr Waldus.</p>
+                <span class="badge">→ Abrir mapa</span>
+            </a>
+        </div>
+
+        <footer class="footer">
+            WaldusLAB · v1.2 · Todos los procesos ocurren en tu navegador.
+        </footer>
+    </div>
+</body>
+</html>
