@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaldusLab</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f0f0f">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0f0f0f;
+            color: #fff;
+            font-family: 'Space Mono', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .container {
+            border: 3px solid #fff;
+            padding: 50px 30px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .subtitle {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
+        }
+        .tools {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .tool-btn {
+            display: block;
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            padding: 18px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.2s, color 0.2s;
+            font-weight: bold;
+        }
+        .tool-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.7rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WaldusLab</h1>
+        <div class="subtitle">Laboratorio creativo de herramientas visuales</div>
+        <div class="tools">
+            <a href="fotomapa.html" class="tool-btn">📍 FotoMapa</a>
+            <a href="editor.html" class="tool-btn">🖤 Editor de Fotos</a>
+        </div>
+        <div class="footer">by Mr Waldus · v1.0</div>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
